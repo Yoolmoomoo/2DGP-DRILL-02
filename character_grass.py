@@ -22,6 +22,8 @@ while (True):
 
         x += 2
 
+        delay(0.001)
+
     while (y<600):
         clear_canvas_now()
         grass.draw_now(400,30)
@@ -30,6 +32,8 @@ while (True):
         x-=1.5
         y+=2
 
+        delay(0.001)
+
     while (y > 90):
         clear_canvas_now()
         grass.draw_now(400,30)
@@ -37,6 +41,8 @@ while (True):
 
         x-=1.5
         y-=2
+
+        delay(0.001)
 
     while (degree < 360):
         clear_canvas_now()
@@ -47,6 +53,8 @@ while (True):
         character.draw_now(X,Y)
 
         degree += 1
+        delay(0.001)
     degree = 20
+    
 
 close_canvas()
