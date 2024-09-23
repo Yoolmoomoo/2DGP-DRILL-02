@@ -9,10 +9,10 @@ character = load_image('character.png')
 x=0
 y=90
 degree = 20
-radius = 20
+radius = 200
 radian = degree * math.pi / 180
-X = 200 + math.cos(radius * math.cos(radian))
-Y = 200 + math.sin(radius * math.cos(radian))
+X = 200 + radius * math.cos(radian)
+Y = 200 + radius * math.sin(radian)
 
 while (True):
     while (x<800):
@@ -38,6 +38,15 @@ while (True):
         x-=1.5
         y-=2
 
+    while (degree < 360):
+        clear_canvas_now()
+        radian = degree * math.pi / 180
+        X = 400 + radius * math.cos(radian)
+        Y = 300 + radius * math.sin(radian)
+        grass.draw_now(400,30)
+        character.draw_now(X,Y)
 
+        degree += 1
+    degree = 20
 
 close_canvas()
